@@ -1,0 +1,24 @@
+
+<import src="movie-list/movie-list-template" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="罗小黑战纪、你的名字" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindChange" />
+  <image wx:if="{{searchPanelShow}}"  class="xx-img"  bindtap="onCancelImgTap" src="/images/icon/xx.png"></image>
+</view>
+<view class="container" wx:if="{{contaierShow}}">
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...inTheaters}}"></template>
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...comingSoon}}"></template>
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...top250}}"></template>
+  </view>
+</view>
+
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchResult}}" />
+</view>
