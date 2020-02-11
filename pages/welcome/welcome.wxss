@@ -10,14 +10,16 @@ page{
 }
 
 .user-avatar{
-  width: 200rpx;
-  height: 200rpx;
+  width: 160rpx;
+  height: 160rpx;
   margin-top: 200rpx;
+  border-radius: 160rpx;
 }
 
 .user-name{
   font-size: 32rpx;
   font-weight: bold;
+  margin-top: 50rpx;
  
 }
 
